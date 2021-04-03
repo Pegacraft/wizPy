@@ -1,6 +1,6 @@
 import json
 
-import sender
+from wizPy import sender
 
 
 class Light:
