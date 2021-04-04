@@ -26,6 +26,9 @@ async def main():
         light.on()
         light.set_brightness(255)
         await light.apply()
+        sleep(1)
+        light.off()
+        await light.apply()
 ```
 
 To set or get the state of an light, you need to create a `Light` object, with the IP of the light. 
@@ -34,4 +37,4 @@ The light class has getter and setter to change the state of the light or get fu
 
 If you wanna apply changes, use `apply()` to send the updated state to the bulb.
 
-To retrieve the IPs of the lights you can use the `discover()` method. If everything worked this method will return a list containing all the IPs as strings.
+To retrieve the IPs of the lights you can use the `discover()` method. If everything worked, this method will return a list containing all the IPs as strings.
