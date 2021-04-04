@@ -41,7 +41,6 @@ async def send_udp(ip: str, message: str) -> str:
 async def send(ip: str, request: json) -> json:
     try:
         to_send: json = await send_udp(ip, json.dumps(request))
-        print(to_send)
         return to_send
     except:
         print("Could not communicate")

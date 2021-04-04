@@ -8,14 +8,14 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='wizpy',
-    version='0.1.3',
-    description='A example Python package',
+    version='0.1.5',
+    description='An API to communicate with the wiz lights',
     url='https://github.com/Pegacraft/wizPy',
     author='Pegacraffft',
     author_email='karl.w.schramm@gmail.com',
-    license='Open source',
+    license='MIT',
     packages=['wizPy'],
-    install_requires=['asyncio'],
+    install_requires=['asyncio', 'asyncio_dgram'],
     classifiers=[
         'Programming Language :: Python :: 3.9',
     ],

@@ -10,12 +10,11 @@ class Light:
 
     def __init__(self, ip: str):
         self.ip = ip
-
+    
     async def apply(self):
         if self.set_request is None:
             print("no set_request available")
         else:
-            print(self.set_request)
             await sender.send(self.ip, self.set_request)
 
     @staticmethod

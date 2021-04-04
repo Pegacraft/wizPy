@@ -20,7 +20,6 @@ async def discover():
         try:
             data, server = sock.recvfrom(4096)
             if """"success":true""" in data.decode() and not discovered.__contains__(str(server[0])):
-                print('Server ip: ' + str(server[0]))
                 discovered.append(str(server[0]))
         except timeout:
             print("done discovering")
